@@ -8,7 +8,11 @@ const TaskList = props => {
         <strong>{props.status}</strong>
       </h3>
       {props.tasks.map(task => (
-        <Task key={task.id} task={task} />
+        <Task
+          key={task.id} 
+          task={task} 
+          onStatusChange={props.onStatusChange}
+        />
       ))}
     </section>
   );

@@ -53,6 +53,7 @@ class TasksPage extends Component {
           key={status}
           status={status}
           tasks={statusTasks}
+          onStatusChange={this.props.onStatusChange}
         />
       );
     });
@@ -93,7 +94,7 @@ class TasksPage extends Component {
             </button>
           </form>
         )}
-        
+
         <section className="task-lists">
           {this.renderTaskLists()}
         </section>
